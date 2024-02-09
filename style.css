@@ -29,13 +29,17 @@ body {
   margin-bottom: 2rem;
   border-radius: 50%; /* This makes the image oval-shaped */
   overflow: hidden; /* This ensures the image is clipped to the oval shape */
+  position: relative; /* Position relative to enable absolute positioning of hearts */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5), 0px 0px 10px rgba(255, 255, 255, 0.5); /* Adding black and white shadows */
 }
+
 
 .title {
   font-size: 3.6rem;
-  color: #000000;
+  color: #ec005b;
   text-align: center;
   margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); /* Adding white shadow */
 }
 
 .buttons {
@@ -43,7 +47,6 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-
   gap: 1rem;
 }
 
@@ -51,12 +54,17 @@ body {
   padding: 1.5rem 2.5rem;
   border: none;
   border-radius: 4px;
-
   color: rgb(255, 255, 255);
   font-size: 1.6rem;
   font-weight: 600;
   cursor: pointer;
   display: inline-block;
+  background-color: transparent;
+  transition: background-color 0.3s ease; /* Adding transition for smoother effect */
+}
+
+.btn:hover {
+  background-color: rgba(7, 150, 19, 0.1); /* Change background color on hover */
 }
 
 .btn--yes {
